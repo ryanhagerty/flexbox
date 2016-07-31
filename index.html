@@ -1,12 +1,10 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
   <title>Flex Your Front-end Muscles!</title>
   <meta name="description" content="Flexbox Session">
-
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
   <!--[if lt IE 9]>
@@ -15,6 +13,72 @@
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
+  <div class="container">
+    <header class="header flex">
+      <img src="images/logo.jpg">
+      <nav role="navigation" class="flex navigation">
+        <ul class="flex nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <div class="flex hero-container">
+        <aside class="flex-column hero-aside">
+          <h2>It's going to fix EVERYTHING.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+          <a href="#" class="flex cta-btn">Amazing!</a>
+        </aside>
+        <div class="hero flex-column flex-column--two-third">
+          <img src="images/hero.jpg" class="hero-image">
+        </div>
+      </div>
+      <div class="flex">
+        <div class="price-box flex">
+          <img src="images/jar1.jpg">
+          <p>Lorem ipsum dolor sit amet, aenean adipiscing elit. Aenean commodo sit ligula eget dolor.</p>
+          <div class="price-cta-container">
+            <h3 class="price-callout">$9.95</h3>
+            <a href="#" class="flex cta-btn">Buy Yesterday</a>
+          </div>
+        </div>
+        <div class="price-box flex">
+          <img src="images/jar2.jpg">
+          <p>Lorem ipsum dolor sit amet, aenean adipiscing elit. Aenean commodo sit ligula eget dolor.</p>
+          <ul class="list-benefit">
+            <li>Lorem ipsum dolor</li>
+            <li>Lorem ipsum dolor</li>
+            <li>Lorem ipsum dolor</li>
+          </ul>
+          <div class="price-cta-container">
+            <h3 class="price-callout">$19.95</h3>
+            <a href="#" class="flex cta-btn">Buy Today</a>
+          </div>
+        </div>
+        <div class="price-box flex">
+          <img src="images/jar1.jpg">
+          <p>Lorem ipsum dolor sit amet, aenean adipiscing elit. Aenean commodo sit ligula eget dolor.</p>
+          <div class="price-cta-container">
+            <h3 class="price-callout">$29.95</h3>
+            <a href="#" class="flex cta-btn">Buy Tomorrow</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer flex flex--reverse">
+      <img src="images/logo_footer.jpg">
+      <nav role="navigation" class="flex navigation navigation--footer">
+        <ul class="flex nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 </body>
 </html>

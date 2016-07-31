@@ -6,7 +6,7 @@
 'use strict';
 
 // Modules.
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var gulp = require('gulp');
 var reload = browserSync.reload;
@@ -15,22 +15,22 @@ var sourcemaps = require('gulp-sourcemaps');
 
 // Gulp static server / browser-sync task.
 gulp.task('serve', ['sass'], function() {
-  gulp.watch("./scss/**/_*.scss", ['sass']);
+  browserSync.init({
+    server: "./"
+  });
+  gulp.watch("./scss/*.scss", ['sass']).on('change', browserSync.reload);
+  gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-// Sass task.
 gulp.task('sass', function() {
-  gulp.src('./scss/**/*.{scss,sass}')
+  return gulp.src("./scss/*.scss")
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'expanded',
-      errLogToConsole: true
-    }))
+    .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest("./css"))
     .pipe(browserSync.stream());
 });
 

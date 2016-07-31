@@ -1,0 +1,48 @@
+// Flex Your Frontend Muscles Styles.
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+// Header.
+.header,
+.footer {
+  align-items: center;
+}
+
+.flex {
+  // Flexibility polyfill for older browsers.
+  -js-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $break-large) {
+    flex-direction: row;
+  }
+}
+
+.flex-column {
+  flex: 1 1 0;
+  /* This is the same as -
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0; */
+}
+
+.flex-column--two-third {
+  flex: 0 0 100%;
+
+  @media (min-width: $break-large) {
+    flex: 0 0 calc(100% / 1.5);
+  }
+}
+
+.flex--reverse {
+  flex-direction: column-reverse;
+
+  @media (min-width: $break-large) {
+    flex-direction: row-reverse;
+  }
+}

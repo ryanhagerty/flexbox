@@ -1,0 +1,46 @@
+// Navigation.
+.navigation {
+  align-self: stretch;
+  align-items: center;
+  background: $blue;
+
+  @media (min-width: $break-large) {
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+  }
+}
+
+.navigation--footer {
+  @media (min-width: $break-large) {
+    justify-content: flex-start;
+    padding: 0 0 0 1.5rem;
+  }
+}
+
+.nav-list {
+  margin: 0;
+  padding: 1rem 0;
+  list-style: none;
+  flex-direction: row;
+}
+
+.nav-item {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav-link {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
