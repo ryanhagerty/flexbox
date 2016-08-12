@@ -32,10 +32,10 @@
 }
 
 .flex-column--two-third {
-  flex: 0 0 100%;
+  flex: 0 1 100%;
 
   @media (min-width: $break-large) {
-    flex: 0 0 calc(100% / 1.5);
+    flex: 0 1 calc(100% / 1.5);
   }
 }
 
